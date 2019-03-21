@@ -1,0 +1,12 @@
+parameters:
+    wizhippo_jasper_client.client.class: Jaspersoft\Client\Client
+    wizhippo_jasper_client.form_helper.class: Wizhippo\Bundle\JasperClientBundle\Helper\JasperServerFormHelper
+
+services:
+    wizhippo_jasper_client.client:
+        class: "%wizhippo_jasper_client.client.class%"
+        arguments: ["%wizhippo_jasper_client.url%", "%wizhippo_jasper_client.username%", "%wizhippo_jasper_client.password%", "%wizhippo_jasper_client.organization%"]
+
+    wizhippo_jasper_client.form_helper:
+        class: "%wizhippo_jasper_client.form_helper.class%"
+        arguments: ["@wizhippo_jasper_client.client" , "@form.factory"]

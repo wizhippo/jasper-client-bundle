@@ -1,0 +1,5 @@
+parameters:
+  wizhippo_jasper_client.url: https://localhost/jasperserver
+  wizhippo_jasper_client.username: jasperadmin
+  wizhippo_jasper_client.password: jasperadmin
+  wizhippo_jasper_client.organization: ~
