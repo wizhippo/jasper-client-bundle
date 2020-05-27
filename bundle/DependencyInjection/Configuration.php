@@ -9,10 +9,9 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('wizhippo_jasper_client');
+        $treeBuilder = new TreeBuilder('wizhippo_jasper_client');
 
-        $rootNode
+        $treeBuilder->getRootNode()
             ->children()
                 ->scalarNode('url')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('username')->isRequired()->cannotBeEmpty()->end()
