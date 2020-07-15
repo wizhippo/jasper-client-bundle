@@ -1,5 +1,5 @@
-Bundle for PHP REST Client for JasperReports Server
-===================================================
+PHP REST Client for JRS
+=======================================
 
 Introduction
 -------------
@@ -9,17 +9,17 @@ Requirements
 -------------
 To use this client, you will need:
 - JasperReports Server (version >= 5.2)
-- PHP (version >= 7.3, with cURL extension)
+- PHP (version >= 5.3, with cURL extension)
 - Composer dependency manager <http://getcomposer.org/download> (Optional, but recommended)
 
 
 Installation
 -------------
-Add the following to your composer.json file for your project, or run `php composer.phar reqiure jwizhippo/jasper-client-bundle v0.3.0` in the directory of your project
+Add the following to your composer.json file for your project, or run `php composer.phar reqiure jaspersoft/rest-client dev-master` in the directory of your project
 
     {
 	    "require": {
-		    "wizhippo/jasper-client-bundle": "dev-master"
+		    "jaspersoft/rest-client": "*"
 	    }
     }
 
@@ -31,8 +31,23 @@ Additionally, a distributed autoloader is included if oyu want to simply include
 
 	require_once "autoload.dist.php"
 
+
+Security Notice
+----------------
+This package uses BASIC authentication to identify itself with the server. This package should only be used over a trusted connection between your report server and your web server.
+
+PHPUnits
+--------
+The tests contained in this package are integration tests and are _not intended to be ran on a production server!_
+
 License
 --------
+Copyright &copy; 2005 - 2014 Jaspersoft Corporation. All rights reserved.
+http://www.jaspersoft.com.
+
+Unless you have purchased a commercial license agreement from Jaspersoft,
+the following license terms apply:
+
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as
 published by the Free Software Foundation, either version 3 of the

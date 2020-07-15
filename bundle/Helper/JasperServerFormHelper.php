@@ -38,16 +38,16 @@ class JasperServerFormHelper
     ];
 
     /**
-     * @var Client
+     * @var \Jaspersoft\Client\Client
      */
     private $restClient;
 
     /**
-     * @var FormFactoryInterface
+     * @var \Symfony\Component\Form\FormFactoryInterface
      */
     private $formFactory;
 
-    public function __construct($restClient, $formFactory)
+    public function __construct(Client $restClient, FormFactoryInterface $formFactory)
     {
         $this->restClient = $restClient;
         $this->formFactory = $formFactory;

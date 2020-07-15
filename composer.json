@@ -18,12 +18,12 @@
     "symfony/config": "^4.0 || ^5.0",
     "symfony/dependency-injection": "^4.0 || ^5.0",
     "symfony/form": "^4.0 || ^5.0",
-    "symfony/http-kernel": "^4.0 || ^5.0",
-    "jaspersoft/rest-client": "^2.0.0"
+    "symfony/http-kernel": "^4.0 || ^5.0"
   },
   "autoload": {
     "psr-4": {
-      "Wizhippo\\Bundle\\JasperClientBundle\\": "bundle"
+      "Wizhippo\\Bundle\\JasperClientBundle\\": "bundle",
+      "Jaspersoft\\": "lib/rest-client/src/Jaspersoft"
     }
   }
 }
